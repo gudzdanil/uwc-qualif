@@ -1,3 +1,8 @@
+/**
+ * Created by Gudz Danil for uawebchallenge
+ */
+
+
 (function () {
 
     var AnswersFactory = new Factory('Answer');
@@ -12,12 +17,7 @@
 
     connectQuestAnsw();
 
-    Visualizer.start(
-        QuestionsFactory.findByVal('Почему вы решили изучать программирование?'),
-        AnswersFactory,
-        QuestionsFactory,
-        ResultsFactory
-    );
+    Visualizer.start(QuestionsFactory.findByVal('Почему вы решили изучать программирование?'));
 
     function connectQuestAnsw() {
         QuestionsFactory.findByVal("Почему вы решили изучать программирование?").pushAnswers([

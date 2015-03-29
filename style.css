@@ -111,3 +111,23 @@ button:active{
     -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
+
+#link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fbfbfb;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-bottom: 0;
+    border-right: 0;
+
+    border-top-left-radius: 8px;
+}
+a{
+    text-decoration: none;
+    color: #2b93b8;
+}
+a:hover{
+    text-decoration: underline;
+}

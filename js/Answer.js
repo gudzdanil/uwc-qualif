@@ -1,21 +1,18 @@
 (function(w){
 
-    function Answer(id, answer, link){
-        this.getAnswer = getAnswer;
-        this.getQuestion = getQuestion;
-        this.setQuestion = setQuestion;
+    function Answer(answer){
+        var link = null;
 
-        function getAnswer(){
+        this.getValue = getValue;
+        this.connect = connect;
+
+        function getValue(){
             return answer;
         }
-        function getQuestion(){
-            return link();
-        }
-        function setQuestion(node){
-            link = node;
-        }
-        function is(idAnswer){
-            return idAnswer === id;
+
+        function connect(obj){
+            link = obj;
+            return this;
         }
     }
 

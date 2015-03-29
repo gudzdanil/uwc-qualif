@@ -1,9 +1,9 @@
 (function(w){
 
-    function Question(id, question){
+    function Question(question){
         var answers = [];
-        this.pushAnswer = pushAnswer;
-        this.getNextAnswer = getNextAnswer;
+        this.pushAnswers = pushAnswers;
+        this.getValue = getValue;
 
         function pushAnswers(answs){
             if(answs instanceof Array){
@@ -13,7 +13,7 @@
                 answers.push(answs);
             }
         }
-        function getQuestion(){
+        function getValue(){
             return question;
         }
         function getNextQuestion(idAnswer){

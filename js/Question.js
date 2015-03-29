@@ -4,10 +4,11 @@
         var answers = [];
         this.pushAnswers = pushAnswers;
         this.getValue = getValue;
+        this.getAnswers = getAnswers;
 
         function pushAnswers(answs){
             if(answs instanceof Array){
-                answers.concat(answs);
+                answers = answers.concat(answs);
             }
             else {
                 answers.push(answs);
@@ -16,13 +17,16 @@
         function getValue(){
             return question;
         }
-        function getNextQuestion(idAnswer){
-            var i;
-            for(i = answers.length; --i+1;){
-                if(answers[i].is(idAnswer)){
-                    return answers[i].getQuestion();
-                }
+        function getAnswers(){
+            var res = [];
+            var i = 0;
+            for(; i < answers.length; i++){
+                res.push({
+                    value: answers[i].getValue(),
+                    link: answers[i].getLink()
+                });
             }
+            return res;
         }
     }
 

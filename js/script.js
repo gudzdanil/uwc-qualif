@@ -12,7 +12,12 @@
 
     connectQuestAnsw();
 
-    Visualizer.start('Почему вы решили изучать программирование?');
+    Visualizer.start(
+        QuestionsFactory.findByVal('Почему вы решили изучать программирование?'),
+        AnswersFactory,
+        QuestionsFactory,
+        ResultsFactory
+    );
 
     function connectQuestAnsw() {
         QuestionsFactory.findByVal("Почему вы решили изучать программирование?").pushAnswers([

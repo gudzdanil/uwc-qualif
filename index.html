@@ -2,15 +2,29 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Test (uwc-qualif)</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-<script src="js/Factory.js"></script>
-<!--<script src="js/AnswersFactory.js"></script>-->
-<script src="js/Answer.js"></script>
-<!--<script src="js/QuestionsFactory.js"></script>-->
-<script src="js/Question.js"></script>
-<script src="js/Test.js"></script>
-<script src="js/script.js"></script>
+
+    <div id="test">
+        <p id="question"></p>
+        <div id="answers-container">
+            <ul id="answers">
+            </ul>
+            <button id="submit">Ответить</button>
+        </div>
+        <div id="result-container">
+            <p id="result"></p>
+            <button id="restart">Перепройти тест</button>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/Visualizer.js"></script>
+    <script src="js/Factory.js"></script>
+    <script src="js/Answer.js"></script>
+    <script src="js/Question.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
